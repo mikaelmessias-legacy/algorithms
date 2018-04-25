@@ -1,2 +1,2 @@
-# utfpr-algorithms
-Algorithms created for my classes on UTFPR.
+# UTFPR Algorithms
+Algorithms created under the Data Structures & Data Searching and Sorting classes on UTFPR.
