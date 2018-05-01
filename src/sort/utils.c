@@ -31,6 +31,10 @@ Type* vector_create(int n) {
 }
 
 void vector_print(Type *v, int n) {
+    if(v == NULL) {
+        return;
+    }
+
     int i;
 
     printf("[");
@@ -44,6 +48,22 @@ void vector_print(Type *v, int n) {
 
     printf("]\n");
 
+}
+
+int vector_isSorted(Type *v, int n) {
+    if(v == NULL) {
+        return -1;
+    }
+
+    int i;
+
+    for(i = 1; i < n; i++) {
+        if(v[i - 1] > v[i]) {
+            return 1;
+        }
+    }
+
+    return 0;
 }
 
 Type* vector_free(Type *v) {
