@@ -9,54 +9,86 @@
 #ifndef SORT_H
 #define SORT_H
 
-/**
- * @brief Sort an vector with the Bubble Sort algorithm.
- * @param v[] The vector to be sorted.
- * @param n The size of the vector.
- */
-void bubble_sort(int v[], int n);
+typedef int Type;
 
 /**
- * @brief Sort an vector with the Selection Sort algorithm.
- * @param v[] The vector to be sorted.
- * @param n The size of the vector.
+ ** SORT ALGORITHMS
  */
-void selection_sort(int v[], int n);
 
 /**
- * @brief Sort an vector with the Insertion Sort algorithm.
- * @param v[] The vector to be sorted.
+ * @brief Sort a vector with the Bubble Sort algorithm.
+ * @param v The vector to be sorted.
  * @param n The size of the vector.
  */
-void insertion_sort(int v[], int n);
+void bubble_sort(Type *v, int n);
 
 /**
- * @brief Sort an vector with the Shell Sort algorithm.
- * @param v[] The vector to be sorted.
+ * @brief Sort a vector with the Selection Sort algorithm.
+ * @param v The vector to be sorted.
  * @param n The size of the vector.
  */
-void shell_sort(int v[], int n);
+void selection_sort(Type *v, int n);
 
 /**
- * @brief Sort an vector with the Quick Sort algorithm.
- * @param v[] The vector to be sorted.
+ * @brief Sort a vector with the Insertion Sort algorithm.
+ * @param v The vector to be sorted.
  * @param n The size of the vector.
  */
-void quick_sort(int v[], int n);
+void insertion_sort(Type *v, int n);
 
 /**
- * @brief Sort an vector with the Heap Sort algorithm.
- * @param v[] The vector to be sorted.
+ * @brief Sort a vector with the Shell Sort algorithm.
+ * @param v The vector to be sorted.
  * @param n The size of the vector.
  */
-void heap_sort(int v[], int n);
+void shell_sort(Type *v, int n);
 
 /**
- * @brief Sort an vector with the Merge Sort algorithm.
- * @param v[] The vector to be sorted.
+ * @brief Sort a vector with the Quick Sort algorithm.
+ * @param v The vector to be sorted.
  * @param n The size of the vector.
  */
-void merge_sort(int v[], int n);
+void quick_sort(Type *v, int n);
 
+/**
+ * @brief Sort a vector with the Heap Sort algorithm.
+ * @param v The vector to be sorted.
+ * @param n The size of the vector.
+ */
+void heap_sort(Type *v, int n);
+
+/**
+ * @brief Sort a vector with the Merge Sort algorithm.
+ * @param v The vector to be sorted.
+ * @param n The size of the vector.
+ */
+void merge_sort(Type *v, int n);
+
+
+/**
+ ** UTILS
+ */
+
+/**
+ * @brief Create a vector and generate random values to be stored inside it.
+ * @param n The size of the vector.
+ * @return A vector allocated with n random values.
+ */
+Type* vector_create(int n);
+
+/**
+ * @brief Print the vector formatted.
+ * @param v The vector.
+ * @param n The size of the vector.
+ */
+void vector_print(Type *v, int n);
+
+/**
+ * @brief Check if the vector is sorted.
+ * @param v The vector.
+ * @param n The size of the vector.
+ * @return The value 0 if sorted or 1 if not sorted.
+ */
+int vector_isSorted(Type *v, int n);
 
 #endif /* SORT_H */
