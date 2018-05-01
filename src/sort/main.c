@@ -9,17 +9,18 @@
 #include <stdio.h>
 #include "sort.h"
 
+#define N 10
+
 int main() {
-    int v[] = {8, 7, 2, 9, 1};
-    int lenght = sizeof v / sizeof v[0];
+    Type *v = vector_create(N);
 
-    printf("Original:\t");
-    vector_print(v, lenght);
+    printf("Original:\n");
+    vector_print(v, N);
 
-    bubble_sort(v, lenght);
+    bubble_sort(v, N);
 
-    printf("Bubble Sort:\t");
-    vector_print(v, lenght);
+    printf("\nBubble Sort:\n");
+    vector_print(v, N);
 
     return 0;
 }

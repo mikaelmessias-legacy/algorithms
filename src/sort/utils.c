@@ -7,7 +7,28 @@
  ***************************************************************************/
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "sort.h"
+
+Type* vector_create(int n) {
+    int i;
+
+    Type *v = malloc(n * sizeof(Type));
+
+    if(v == NULL) {
+        return NULL;
+    }
+    else {
+        srand(time((void*) v));
+
+        for(i = 0; i < n; i++) {
+            v[i] = rand() % n;
+        }
+    }
+
+    return v;
+}
 
 void vector_print(Type *v, int n) {
     int i;
