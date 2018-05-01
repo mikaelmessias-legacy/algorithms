@@ -45,3 +45,11 @@ void vector_print(Type *v, int n) {
     printf("]\n");
 
 }
+
+Type* vector_free(Type *v) {
+    if(v != NULL) {
+        free(v);
+    }
+
+    return NULL;
+}

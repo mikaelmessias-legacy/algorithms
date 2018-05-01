@@ -22,5 +22,7 @@ int main() {
     printf("\nBubble Sort:\n");
     vector_print(v, N);
 
+    v = vector_free(v);
+
     return 0;
 }

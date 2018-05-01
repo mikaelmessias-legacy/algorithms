@@ -91,4 +91,6 @@ void vector_print(Type *v, int n);
  */
 int vector_isSorted(Type *v, int n);
 
+Type* vector_free(Type *v);
+
 #endif /* SORT_H */
