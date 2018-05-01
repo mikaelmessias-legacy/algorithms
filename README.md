@@ -19,7 +19,7 @@ Sorting classes at UTFPR.
 ### Simple sort
 - [x] Bubble Sort
 - [x] Selection Sort
-- [ ] Insertion Sort
+- [x] Insertion Sort
 
 ### Efficient sort
 - [ ] Shell Sort
