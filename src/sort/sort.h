@@ -91,6 +91,11 @@ void vector_print(Type *v, int n);
  */
 int vector_isSorted(Type *v, int n);
 
+/**
+ * @brief Free the vector from memory.
+ * @param v The vector.
+ * @return Null element.
+ */
 Type* vector_free(Type *v);
 
 #endif /* SORT_H */
