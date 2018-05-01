@@ -98,4 +98,12 @@ int vector_isSorted(Type *v, int n);
  */
 Type* vector_free(Type *v);
 
+/**
+ * @brief Swap two elements from a vector.
+ * @param v The vector.
+ * @param a The first element position.
+ * @param b The second element position.
+ **/
+void vector_swap(Type *v, int a, int b);
+
 #endif /* SORT_H */
