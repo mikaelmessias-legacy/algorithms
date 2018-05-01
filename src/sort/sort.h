@@ -9,10 +9,54 @@
 #ifndef SORT_H
 #define SORT_H
 
-/* @brief Sort an array[0...N-1] with the bubble sort algorithm.
- * @param v[] The array to be sorted.
- * @param n The maximum array size.
+/**
+ * @brief Sort an vector with the Bubble Sort algorithm.
+ * @param v[] The vector to be sorted.
+ * @param n The size of the vector.
  */
 void bubble_sort(int v[], int n);
+
+/**
+ * @brief Sort an vector with the Selection Sort algorithm.
+ * @param v[] The vector to be sorted.
+ * @param n The size of the vector.
+ */
+void selection_sort(int v[], int n);
+
+/**
+ * @brief Sort an vector with the Insertion Sort algorithm.
+ * @param v[] The vector to be sorted.
+ * @param n The size of the vector.
+ */
+void insertion_sort(int v[], int n);
+
+/**
+ * @brief Sort an vector with the Shell Sort algorithm.
+ * @param v[] The vector to be sorted.
+ * @param n The size of the vector.
+ */
+void shell_sort(int v[], int n);
+
+/**
+ * @brief Sort an vector with the Quick Sort algorithm.
+ * @param v[] The vector to be sorted.
+ * @param n The size of the vector.
+ */
+void quick_sort(int v[], int n);
+
+/**
+ * @brief Sort an vector with the Heap Sort algorithm.
+ * @param v[] The vector to be sorted.
+ * @param n The size of the vector.
+ */
+void heap_sort(int v[], int n);
+
+/**
+ * @brief Sort an vector with the Merge Sort algorithm.
+ * @param v[] The vector to be sorted.
+ * @param n The size of the vector.
+ */
+void merge_sort(int v[], int n);
+
 
 #endif /* SORT_H */
