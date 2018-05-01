@@ -73,3 +73,9 @@ Type* vector_free(Type *v) {
 
     return NULL;
 }
+
+void vector_swap(Type *v, int a, int b) {
+    Type x = v[a];
+    v[a] = v[b];
+    v[b] = x;
+}

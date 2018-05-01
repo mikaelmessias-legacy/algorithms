@@ -10,9 +10,7 @@
 #include "sort.h"
 
 void selection_sort(Type *v, int n) {
-    int i, j;
-
-    Type smaller;
+    int i, j, smaller;
 
     for(i = 0; i < n-1; i++) {
         smaller = i;
@@ -27,12 +25,9 @@ void selection_sort(Type *v, int n) {
         }
 
         // If there is no element smaller than the smaller position,
-        // it prevents this block from running unnecessarily.
+        // prevents unnecessarily call for function vector_swap.
         if(smaller != i) {
-            // Swap the smaller element with the first position.
-            Type x = v[smaller];
-            v[smaller] = v[i];
-            v[i] = x;
+            vector_swap(v, smaller, i);
         }
     }
 }

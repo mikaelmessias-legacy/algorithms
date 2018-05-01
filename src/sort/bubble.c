@@ -20,9 +20,7 @@ void bubble_sort(Type *v, int n) {
             // For each iteration, compares two contiguous positions and
             // swap them if the rightmost element is larger.
             if(v[j] < v[j - 1]) {
-                x = v[j];
-                v[j] = v[j - 1];
-                v[j - 1] = x;
+                vector_swap(v, j, j - 1);
             }
         }
     }
