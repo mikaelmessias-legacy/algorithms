@@ -17,8 +17,7 @@ void selection_sort(Type *v, int n) {
 
         for(j = i + 1; j < n; j++) {
             // Searches if the smaller index stores an element larger
-            // than those one position head until n.
-            // in v[smaller].
+            // than those in positions ahead until the end of the vector.
             if(v[j] < v[smaller]) {
                 smaller = j;
             }
