@@ -19,9 +19,25 @@ typedef int Type;
 /**
  * @brief Create a vector and generate random values to be stored inside it.
  * @param n The size of the vector.
- * @return A vector allocated with n random values.
+ * @return A pointer to the allocated vector.
  */
 Type* vector_create(int n);
+
+/**
+ * @brief Create a vector, generate random values and insert them in ascending
+ * order.
+ * @param n The size of the vector.
+ * @return A pointer to the allocated vector.
+ */
+Type* vector_create_ascending(int n);
+
+/**
+ * @brief Create a vector, generate random values and insert them in descending
+ * order.
+ * @param n The size of the vector.
+ * @return A pointer to the allocated vector.
+ */
+Type* vector_create_descending(int n);
 
 /**
  * @brief Print the vector formatted.
@@ -34,7 +50,7 @@ void vector_print(Type *v, int n);
  * @brief Check if the vector is sorted.
  * @param v The vector.
  * @param n The size of the vector.
- * @return The value 0 if sorted or 1 if not sorted.
+ * @return The value 1 if sorted or 0 if not sorted.
  */
 int vector_isSorted(Type *v, int n);
 

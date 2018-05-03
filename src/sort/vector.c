@@ -14,7 +14,7 @@
 Type* vector_create(int n) {
     int i;
 
-    Type *v = malloc(n * sizeof(Type));
+    Type *v = calloc(n, sizeof(Type));
 
     if(v == NULL) {
         return NULL;
@@ -28,6 +28,74 @@ Type* vector_create(int n) {
     }
 
     return v;
+}
+
+Type* vector_create_ascending(int n) {
+    int i, j;
+
+    Type *v = calloc(n, sizeof(Type));
+
+    if(v != NULL) {
+        srand(time((void*) v));
+
+        for(i = 0; i < n; i++) {
+            Type x = rand() % n;
+
+            int k = 0;
+
+            while(x > v[k] && k < i) {
+                k++;
+            }
+
+            j = i;
+
+            while(j > k) {
+                v[j] = v[j - 1];
+                j--;
+            }
+
+            v[j] = x;
+        }
+
+        return v;
+    }
+
+    return NULL;
+}
+
+Type* vector_create_descending(int n) {
+    int i, j;
+
+    Type *v = calloc(n, sizeof(Type));
+
+    if(v != NULL) {
+        srand(time((void*) v));
+
+        for(i = 0; i < n; i++) {
+            Type x = rand() % n;
+
+            int k = n - 1;
+
+            int elements = 0;
+
+            while(x > v[k] && k > (k - i)) {
+                k--;
+            }
+
+            j = n - i - 1;
+
+            while(j < k) {
+                v[j] = v[j + 1];
+                j++;
+            }
+
+            v[j] = x;
+        }
+
+        return v;
+    }
+
+    return NULL;
 }
 
 void vector_print(Type *v, int n) {
@@ -59,11 +127,11 @@ int vector_isSorted(Type *v, int n) {
 
     for(i = 1; i < n; i++) {
         if(v[i - 1] > v[i]) {
-            return 1;
+            return 0;
         }
     }
 
-    return 0;
+    return 1;
 }
 
 Type* vector_free(Type *v) {
