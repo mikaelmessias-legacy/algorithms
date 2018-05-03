@@ -22,7 +22,7 @@ Sorting classes at UTFPR.
 - [x] Insertion Sort
 
 ### Efficient sort
-- [ ] Shell Sort
+- [x] Shell Sort
 - [ ] Quick Sort
 - [ ] Heap Sort
 - [ ] Merge Sort
