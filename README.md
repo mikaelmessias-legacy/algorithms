@@ -23,6 +23,6 @@ Sorting classes at UTFPR.
 
 ### Efficient sort
 - [x] Shell Sort
-- [ ] Quick Sort
+- [x] Quick Sort
 - [ ] Heap Sort
 - [ ] Merge Sort
