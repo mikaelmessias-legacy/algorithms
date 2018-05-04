@@ -25,4 +25,4 @@ Sorting classes at UTFPR.
 - [x] Shell Sort
 - [x] Quick Sort
 - [x] Heap Sort
-- [ ] Merge Sort
+- [x] Merge Sort
