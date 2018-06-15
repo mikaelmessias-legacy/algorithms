@@ -26,3 +26,16 @@ Sorting classes at UTFPR.
 - [x] Quick Sort
 - [x] Heap Sort
 - [x] Merge Sort
+
+## External Sort
+
+- [ ] Merge Sort
+- [ ] Quick Sort
+
+## Search Algorithms
+
+### Primary Memory
+
+- [ ] Linear Search
+- [ ] Binary Search Tree
+- [ ] SBB Tree
