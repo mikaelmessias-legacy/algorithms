@@ -28,10 +28,14 @@ void shell_sort(Type *v, int n) {
             Type x = v[i];
             j = i;
 
-            while(v[j - h] > x && j >= h) {
+            while(v[j - h] > x) {
                 // Pushes bigger elements one position to the right
                 v[j] = v[j - h];
                 j -= h;
+
+                if(j < h) {
+                    break;
+                }
             }
 
             // Inserts the i-th element in its appropriate position

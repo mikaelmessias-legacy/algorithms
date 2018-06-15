@@ -22,11 +22,14 @@ static void merge(Type *v, int l, int m, int r) {
     // of the w vector.
     while(i < m && j < r) {
         if(v[i] <= v[j]) {
-            w[k++] = v[i++];
+            w[k] = v[i];
+            i++;
         }
         else {
-            w[k++] = v[j++];
+            w[k] = v[j];
+            j++;
         }
+        k++;
     }
 
     // Copies the remaining elements until it reaches the middle of the original
@@ -47,7 +50,7 @@ static void merge(Type *v, int l, int m, int r) {
         v[i] = w[i - l];
     }
 
-   w = vector_free(w);
+    w = vector_free(w);
 }
 
 static void mergesort(Type *v, int l, int r) {
